@@ -60,7 +60,7 @@ namespace VanillaMemesExpanded
 
         public static void AddColonistToIllnessList(Pawn pawn, int ticks)
         {
-            if (!colonist_illness_tracker.ContainsKey(pawn) && pawn != null)
+            if (pawn != null && !colonist_illness_tracker.ContainsKey(pawn))
             {
                 colonist_illness_tracker.Add(pawn, ticks);
             }
@@ -81,7 +81,7 @@ namespace VanillaMemesExpanded
 
         public static void AddColonistToCaravanList(Pawn pawn, int ticks)
         {
-            if (!colonist_caravan_tracker.ContainsKey(pawn) && pawn != null)
+            if (pawn != null && !colonist_caravan_tracker.ContainsKey(pawn))
             {
                 colonist_caravan_tracker.Add(pawn, ticks);
             }
@@ -102,7 +102,7 @@ namespace VanillaMemesExpanded
 
         public static void AddColonistToScarList(Pawn pawn, int scars)
         {
-            if (!colonist_scar_counter.ContainsKey(pawn) && pawn != null)
+            if (pawn != null && !colonist_scar_counter.ContainsKey(pawn))
             {
                 colonist_scar_counter.Add(pawn, scars);
             }
@@ -117,7 +117,7 @@ namespace VanillaMemesExpanded
 
         public static void AddColonistToJunkList(Pawn pawn, int numOfJunk)
         {
-            if (!colonist_junk_tracker.ContainsKey(pawn) && pawn != null)
+            if (pawn != null && !colonist_junk_tracker.ContainsKey(pawn))
             {
                 colonist_junk_tracker.Add(pawn, numOfJunk);
             }
@@ -132,7 +132,7 @@ namespace VanillaMemesExpanded
 
         public static void AddColonistToBoozeList(Pawn pawn, int ticks)
         {
-            if (!colonist_booze_tracker.ContainsKey(pawn)&&pawn!=null)
+            if (pawn!=null !colonist_booze_tracker.ContainsKey(pawn))
             {
                 colonist_booze_tracker.Add(pawn, ticks);
             }
@@ -200,7 +200,7 @@ namespace VanillaMemesExpanded
 
         public static void AddToEnslavedPawns(Pawn pawn)
         {
-            if (!enslavedPawns.Contains(pawn))
+            if (pawn != null && !enslavedPawns.Contains(pawn))
             {
                 enslavedPawns.Add(pawn);
             }
